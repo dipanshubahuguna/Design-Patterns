@@ -1,7 +1,8 @@
+package Creational.Singleton;
 public class ThreadSafeSingleton {
     private static ThreadSafeSingleton instance;
     private ThreadSafeSingleton(){};
-    private static synchronized ThreadSafeSingleton getThreadSafeSingleton(){
+    public static synchronized ThreadSafeSingleton getInstance(){
         if(instance == null){
             return new ThreadSafeSingleton();
         }

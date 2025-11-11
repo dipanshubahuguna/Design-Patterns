@@ -1,8 +1,9 @@
+package Creational.Singleton;
 public class DoubleCheckedLockingSingleton {
     private static DoubleCheckedLockingSingleton instance;
     private DoubleCheckedLockingSingleton(){};
 
-    private static DoubleCheckedLockingSingleton getDoubleCheckedLockingSingleton(){
+    public static DoubleCheckedLockingSingleton getInstance(){
         if(instance == null) {
             synchronized(DoubleCheckedLockingSingleton.class) {
                 if(instance == null){
